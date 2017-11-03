@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - RavenTodo2</title>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #e5e5e5;
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #333;
+        }
+
+        h1, h2 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+        }
+
+        a {
+            border-bottom: 1px dotted #c9c9c9;
+            color: #336699;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 5px 10px;
+        }
+
+        th {
+            text-align: left;
+            border-bottom: 2px solid #ececec;
+        }
+
+        td {
+            border-bottom: 1px solid #ececec;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input[type="text"] {
+            border: 1px solid #ececec;
+            padding: 8px 6px;
+            width: 250px;
+        }
+
+        button[type="submit"] {
+            background: #336699;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+        }
+
+        .topbar {
+            background: #336699;
+            color: #eee;
+            font-size: 18px;
+            padding: 10px 0;
+        }
+
+         .container {
+             margin: 0 auto;
+             max-width: 800px;
+             width: 800px;
+         }
+
+         .main {
+             background: #fff;
+             padding: 20px 10px 0 10px;
+             height: 100vh;
+         }
+
+         .add-form {
+             margin-top: 20px;
+         }
+
+         .right {
+             text-align: right;
+         }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="container">
+            RavenTodo2
+        </div>
+    </div>
+    <div class="container">
+        <div class="main">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

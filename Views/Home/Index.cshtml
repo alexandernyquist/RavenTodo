@@ -1,0 +1,57 @@
+﻿@model List<RavenTodo2.Models.Todo>
+@{
+    ViewBag.Title = "All Todos";
+}
+
+<h2>All Todos</h2>
+
+@if (Model.Any())
+{
+    <table>
+        <thead>
+        <tr>
+            <th style="width: 100px;">#</th>
+            <th>Text</th>
+            <th class="right" style="width: 100px;">Done</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var todo in Model)
+        {
+            <tr>
+                <td>@todo.Id</td>
+                <td>@todo.Text</td>
+                <td class="right">
+                    @if (todo.Done)
+                    {
+                        <span>&#10003;</span>
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Mark as done", "MarkAsDone", new { id = todo.Id })
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>You have no todos. Yay!</p>
+}
+
+<div class="add-form">
+    <h2>Add new Todo</h2>
+
+    @using (Html.BeginForm("AddTodo", "Home", FormMethod.Post))
+    {
+        <p>
+            @Html.Label("Text")
+            @Html.TextBox("Text")
+        </p>
+        <p>
+            <button type="submit">Save</button>
+        </p>
+    }
+</div>
